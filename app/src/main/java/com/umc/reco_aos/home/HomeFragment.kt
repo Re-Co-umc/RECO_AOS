@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
 
         // 마커 아이콘
         var currentPinBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_map_current_pin)
-        currentPinBitmap = createScaledBitmap(currentPinBitmap, 30, 30, true)
+        currentPinBitmap = createScaledBitmap(currentPinBitmap, 50, 50, true)
 
         currentPinMarker.icon = currentPinBitmap // 마커 아이콘 지정
         currentPinMarker.setPosition(0.5f, 0.5f) // 마커의 중심점을 수직, 수평 모두 중앙으로 지정
@@ -57,8 +57,8 @@ class HomeFragment : Fragment() {
         tmapview.setCenterPoint(127.0227773, 37.5063362)
 
         // 가까운 리필스테이션 목록
-        val bottomSheet = RefillListFragment()
-        bottomSheet.show(requireActivity().supportFragmentManager, bottomSheet.tag)
+        //val bottomSheet = RefillListFragment()
+        //bottomSheet.show(requireActivity().supportFragmentManager, bottomSheet.tag)
     }
 
     override fun onDestroy() {

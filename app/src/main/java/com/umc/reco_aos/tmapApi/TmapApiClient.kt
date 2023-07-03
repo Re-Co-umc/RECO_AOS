@@ -6,7 +6,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 // T-Map API
 object TmapApiClient {
-    private const val BASE_URL = "https://apis.openapi.sk.com/tmap/pois"
+    private const val BASE_URL = "https://apis.openapi.sk.com/"
 
     val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
