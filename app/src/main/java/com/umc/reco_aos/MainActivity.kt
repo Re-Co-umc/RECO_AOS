@@ -5,10 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.umc.reco_aos.databinding.ActivityMainBinding
+import com.umc.reco_aos.home.HomeFragment
+import com.umc.reco_aos.mypage.MyPageFragment
+import com.umc.reco_aos.tree.TreeFragment
 
 class MainActivity : AppCompatActivity() {
     // ViewBinding Setting
@@ -34,8 +39,12 @@ class MainActivity : AppCompatActivity() {
         // 최상위 화면을 제외하고는 BottomNavigation Bar 없애기
         setBottomNavigation()
 
-        binding.menuTree.setOnClickListener {
+        /*supportFragmentManager.beginTransaction().replace(binding.navHostFragment.id, HomeFragment()).commit()
+        // navigationBottomView 등록: 하단바 fragment id(bottom_navigation) 등록
+        transitionNavigationBottomView(binding.navBottom, supportFragmentManager)*/
 
+        binding.menuTree.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(binding.navHostFragment.id, TreeFragment()).commit()
         }
     }
 
@@ -48,6 +57,26 @@ class MainActivity : AppCompatActivity() {
             } else {
                 binding.navBottom.visibility = View.GONE
             }
+        }
+    }
+
+    // NavigationBottomView 화면 전환하는 함수.
+    private fun transitionNavigationBottomView(bottomView: BottomNavigationView, fragmentManager: FragmentManager){
+        bottomView.setOnItemSelectedListener {
+            it.isChecked = true
+            when(it.itemId){
+                R.id.menu_home -> {
+                    fragmentManager.beginTransaction().replace(binding.navHostFragment.id, HomeFragment()).commit()
+                }
+                R.id.menu_tree -> {
+                    fragmentManager.beginTransaction().replace(binding.navHostFragment.id, TreeFragment()).commit()
+                }
+                R.id.menu_mypage -> {
+                    fragmentManager.beginTransaction().replace(binding.navHostFragment.id, MyPageFragment()).commit()
+                }
+                else -> Log.d("test", "error") == 0
+            }
+            Log.d("test", "final") == 0
         }
     }
 

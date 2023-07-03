@@ -43,8 +43,8 @@ fun getRefillStation(
                         val noorLat: Double = refill.split("noorLat=")[1].split(",")[0].toDouble()
                         val noorLon: Double = refill.split("noorLon=")[1].split(",")[0].toDouble()
 
-                        val latitude: Double = (frontLat + noorLat) / 2.0
-                        val longitude: Double = (frontLon + noorLon) / 2.0
+                        //val latitude: Double = (frontLat + noorLat) / 2.0
+                        //val longitude: Double = (frontLon + noorLon) / 2.0
 
                         val upperAddrName: String = refill.split("upperAddrName=")[1].split(",")[0]
                         val middleAddrName: String = refill.split("middleAddrName=")[1].split(",")[0]
@@ -53,8 +53,8 @@ fun getRefillStation(
                         result.add(
                             RefillStationData(
                                 name,
-                                latitude,
-                                longitude,
+                                frontLat,
+                                frontLon,
                                 address
                             )
                         )
