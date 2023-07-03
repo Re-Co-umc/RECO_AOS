@@ -1,11 +1,7 @@
 package com.umc.reco_aos
 
-import android.R
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.tabs.TabLayoutMediator
-import com.umc.reco_aos.databinding.FragmentDetailBinding
-
+import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -14,17 +10,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.umc.reco_aos.databinding.ActivityMainBinding
 
-
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var fragment: DetailFragment
-//    private lateinit var detailBinding: FragmentDetailBinding
-//    private lateinit var fragmentDetail: DetailviewFragment
-//    private lateinit var fragmentReview: ReviewviewFragment
-//    private lateinit var detailFragmentAdapter: DetailFragmentAdapter
-
-
-
 class MainActivity : AppCompatActivity() {
     // ViewBinding Setting
     lateinit var binding: ActivityMainBinding
@@ -32,19 +17,14 @@ class MainActivity : AppCompatActivity() {
     // NavController 선언
     private lateinit var navController: NavController
 
+    //private lateinit var fragment: DetailFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        fragment = DetailFragment()
 
-
-        supportFragmentManager.beginTransaction()
-            .add(binding.fragment.id, fragment)
-            .commit()
-
-            
         // NavController 설정
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
@@ -61,8 +41,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
-  }
 
     private fun setBottomNavigation() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
@@ -92,6 +70,5 @@ class MainActivity : AppCompatActivity() {
         else{
             super.onBackPressed()
         }
-
     }
-
+}
