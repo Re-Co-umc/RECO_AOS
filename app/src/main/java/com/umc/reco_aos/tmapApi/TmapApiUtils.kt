@@ -31,35 +31,37 @@ fun getRefillStation(
                     val result: MutableList<RefillStationData> = mutableListOf<RefillStationData>()
 
                     for(item in refillStations) {
-                        Log.d("Test", "--------------------------------")
-                        Log.d("Test", item.toString())
-                        // 아이템 내용을 json 형태로 변환
+                        //Log.d("Test", "--------------------------------")
+                        //Log.d("Test", item.toString())
+                        // 아이템 내용
+                        val refill: String = item.toString()
 
+                        val name: String = refill.split("name=")[1].split(",")[0]
 
-                        /*val frontLat: Double = jsonContent.getString("frontLat").toDouble()
-                        val frontLon: Double = jsonContent.getString("frontLon").toDouble()
-                        val noorLat: Double = jsonContent.getString("noorLat").toDouble()
-                        val noorLon: Double = jsonContent.getString("noorLon").toDouble()
+                        val frontLat: Double = refill.split("frontLat=")[1].split(",")[0].toDouble()
+                        val frontLon: Double = refill.split("frontLon=")[1].split(",")[0].toDouble()
+                        val noorLat: Double = refill.split("noorLat=")[1].split(",")[0].toDouble()
+                        val noorLon: Double = refill.split("noorLon=")[1].split(",")[0].toDouble()
 
-                        val latitude: Double = (frontLat + noorLat) / 2.0
-                        val longitude: Double = (frontLon + noorLon) / 2.0
+                        //val latitude: Double = (frontLat + noorLat) / 2.0
+                        //val longitude: Double = (frontLon + noorLon) / 2.0
 
-                        val upperAddrName: String = jsonContent.getString("upperAddrName")
-                        val middleAddrName: String = jsonContent.getString("middleAddrName")
+                        val upperAddrName: String = refill.split("upperAddrName=")[1].split(",")[0]
+                        val middleAddrName: String = refill.split("middleAddrName=")[1].split(",")[0]
                         val address: String = upperAddrName + ", " + middleAddrName
 
                         result.add(
                             RefillStationData(
-                                jsonContent.getString("name"),
-                                latitude,
-                                longitude,
+                                name,
+                                frontLat,
+                                frontLon,
                                 address
                             )
-                        )*/
+                        )
 
                     }
 
-                    //setRefillStation(result)
+                    setRefillStation(result)
                 }
 
                 //getAllProfile(result)
