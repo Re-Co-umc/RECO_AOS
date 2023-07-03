@@ -87,12 +87,12 @@ class HomeFragment : Fragment() {
 
     // 리필스테이션 세팅
     fun setRefillStation(refillStation: MutableList<RefillStationData>) {
-        if(refillStation != null) {
+        if(refillStation.size > 0) {
             // 가장 가까운 리필 스테이션
             binding.textShopName.text = refillStation[0].placeName
             binding.textShopAddress.text = refillStation[0].address
 
-            for (refill in refillStation) {
+            /*for (refill in refillStation) {
                 // 현재 위치 좌표
                 val refillPinMarker = TMapMarkerItem()
                 val refillPinPoint = TMapPoint(refill.latitude, refill.longitude) // 현위치
@@ -100,7 +100,7 @@ class HomeFragment : Fragment() {
                 // 마커 아이콘
                 var refillPinBitmap =
                     BitmapFactory.decodeResource(getResources(), R.drawable.ic_map_refill_pin)
-                refillPinBitmap = createScaledBitmap(refillPinBitmap, 50, 50, true)
+                refillPinBitmap = createScaledBitmap(refillPinBitmap, 100, 100, true)
 
                 refillPinMarker.icon = refillPinBitmap // 마커 아이콘 지정
                 refillPinMarker.setPosition(0.5f, 1.0f) // 마커의 중심점을 수직 중앙, 수평 하단으로 지정
@@ -108,7 +108,7 @@ class HomeFragment : Fragment() {
                 refillPinMarker.name = "리필스테이션" // 마커의 타이틀 지정
 
                 tmapview!!.addMarkerItem("refillPinMarker", refillPinMarker) // 지도에 마커 추가
-            }
+            }*/
         }
     }
 
