@@ -11,6 +11,9 @@
         android:name="com.umc.reco_aos.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_menu_home_to_tree"
+            app:destination="@id/menu_tree" />
     </fragment>
 
     <!-- 나무 -->
@@ -27,6 +30,9 @@
         android:name="com.umc.reco_aos.mypage.MyPageFragment"
         android:label="fragment_mypage"
         tools:layout="@layout/fragment_my_page" >
+        <action
+            android:id="@+id/action_menu_mypage_to_tree"
+            app:destination="@id/menu_tree" />
     </fragment>
 
 </navigation>

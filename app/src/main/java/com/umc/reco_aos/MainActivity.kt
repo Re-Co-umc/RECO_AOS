@@ -2,6 +2,7 @@ package com.umc.reco_aos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.NavController
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         // 최상위 화면을 제외하고는 BottomNavigation Bar 없애기
         setBottomNavigation()
 
+        binding.menuTree.setOnClickListener {
+
+        }
     }
 
     private fun setBottomNavigation() {
