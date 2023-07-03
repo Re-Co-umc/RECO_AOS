@@ -2,4 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="second">#3EAC17</color>
+    <color name="second10">#1A3EAC17</color>
+    <color name="second5">#0D3EAC17</color>
+    <color name="second60">#993EAC17</color>
+
+    <color name="btnColor">#3EAC17</color>
+    <color name="lineColor">#D9D9D9</color>
+    <color name="detailFontColor">#414141</color>
+    <color name="mlFont">#828282</color>
+
+
+    <color name="main_green">#3EAC17</color>
+
+    <color name="gray0">#D9D9D9</color>
+    <color name="gray1">#BFBFBF</color>
+    <color name="gray2">#828282</color>
+    <color name="gray3">#656565</color>
+    <color name="gray4">#414141</color>
+    <color name="gray5">#000000</color>
 </resources>

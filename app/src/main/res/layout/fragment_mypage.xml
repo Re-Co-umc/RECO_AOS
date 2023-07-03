@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MypageFragment">
+
+
+    <TextView
+        android:id="@+id/mypage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="마이페이지"
+        android:textColor="#414141"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_title" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="김리코님 안녕하세요!"
+        android:textColor="#414141"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/kakao"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:text="카카오"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="590dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:background="@drawable/mypage_btn_bg"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="찜한 가게"
+            android:textSize="16dp"
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/black"
+            android:background="@drawable/mypage_btn_bg"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="프로필 수정"
+            android:textSize="16dp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/black"
+            android:background="@drawable/mypage_btn_bg"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="이용약관"
+            android:textSize="16dp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:textColor="@color/black"
+            android:background="@drawable/mypage_btn_bg"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="로그아웃"
+            android:textSize="16dp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="회원탈퇴"
+            android:textStyle=""
+            android:textSize="11dp"
+            style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

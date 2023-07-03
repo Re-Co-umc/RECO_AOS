@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menu_home">
+
+    <!-- 메인 홈: 지도 -->
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.umc.reco_aos.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_menu_home_to_tree"
+            app:destination="@id/menu_tree" />
+    </fragment>
+
+    <!-- 나무 -->
+    <fragment
+        android:id="@+id/menu_tree"
+        android:name="com.umc.reco_aos.tree.TreeFragment"
+        android:label="fragment_tree"
+        tools:layout="@layout/fragment_tree" >
+    </fragment>
+
+    <!-- 마이페이지 -->
+    <fragment
+        android:id="@+id/menu_mypage"
+        android:name="com.umc.reco_aos.MypageFragment"
+        android:label="fragment_mypage"
+        tools:layout="@layout/fragment_mypage" >
+        <action
+            android:id="@+id/action_menu_mypage_to_tree"
+            app:destination="@id/menu_tree" />
+    </fragment>
+
+</navigation>
