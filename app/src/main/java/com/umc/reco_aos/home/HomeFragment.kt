@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import com.skt.Tmap.TMapMarkerItem
 import com.skt.Tmap.TMapPoint
 import com.skt.Tmap.TMapView
+import com.umc.reco_aos.DetailFragment
 import com.umc.reco_aos.R
+import com.umc.reco_aos.TreeFragment
 import com.umc.reco_aos.databinding.FragmentHomeBinding
 import com.umc.reco_aos.tmapApi.getRefillStation
 
@@ -18,8 +20,7 @@ import com.umc.reco_aos.tmapApi.getRefillStation
 // 홈: 지도
 class HomeFragment : Fragment() {
     // ViewBinding Setting
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    lateinit var binding: FragmentHomeBinding
 
     // T-map Service Key
     private val TMAP_SERVICE_KEY = "TvgSIt2YIV40wmWE6sgoz190w6oRRFK064xqIYKI"
@@ -32,7 +33,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentHomeBinding.inflate(layoutInflater)
 
         return binding.root
     }
@@ -83,6 +84,11 @@ class HomeFragment : Fragment() {
                 binding.btnRefillBookmark.setImageResource(iconResourceId)
             }
         }
+
+        // 리필스테이션 세부
+        binding.textShopName.setOnClickListener(View.OnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction().add(R.id.nav_host_fragment, DetailFragment()).commit()
+        })
     }
 
     // 리필스테이션 세팅
@@ -92,7 +98,7 @@ class HomeFragment : Fragment() {
             binding.textShopName.text = refillStation[0].placeName
             binding.textShopAddress.text = refillStation[0].address
 
-            for(refill in refillStation) {
+            /*for(refill in refillStation) {
                 // 현재 위치 좌표
                 val refillPinMarker = TMapMarkerItem()
                 val refillPinPoint = TMapPoint(refill.latitude, refill.longitude) // 현위치
@@ -108,12 +114,7 @@ class HomeFragment : Fragment() {
                 refillPinMarker.name = "리필스테이션" // 마커의 타이틀 지정
 
                 tmapview!!.addMarkerItem("refillPinMarker", refillPinMarker) // 지도에 마커 추가
-            }
+            }*/
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 }
