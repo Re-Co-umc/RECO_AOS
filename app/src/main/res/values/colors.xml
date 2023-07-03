@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="second">#3EAC17</color>
+    <color name="second10">#1A3EAC17</color>
+    <color name="second5">#0D3EAC17</color>
+    <color name="second60">#993EAC17</color>
+
 </resources>
