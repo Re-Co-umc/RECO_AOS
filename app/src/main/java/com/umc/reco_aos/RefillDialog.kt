@@ -48,6 +48,7 @@ class RefillDialog(context: Context):Dialog(context){
         editText = binding.editText
         setContentView(binding.root)
         initViews()
+        goodDialog()
     }
 
     private fun initViews() = with(binding) {
@@ -55,7 +56,9 @@ class RefillDialog(context: Context):Dialog(context){
         window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         window?.setLayout(900, 700,)
         finishBtn.setOnClickListener {
+
             goodDialog()
+            dismiss()
             }
 //            dismiss()
 //            if(editText.text.isNullOrBlank()){Toast.makeText(context, "리필 양을 입력하세요!", Toast.LENGTH_SHORT)}
