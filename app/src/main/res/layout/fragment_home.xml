@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 홈: 지도 -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +12,55 @@
         android:id="@+id/linear_map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"/>
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"/>
 
-</FrameLayout>
+    <!-- 검색창 -->
+    <RelativeLayout
+        android:id="@+id/relative_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="4dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_search_bar_border">
+
+        <!-- 검색어 입력 -->
+        <EditText
+            android:id="@+id/edittext_search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/search_hint"
+            android:textColorHint="@color/gray2"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <!-- 검색 아이콘 -->
+        <ImageView
+            android:id="@+id/img_search_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="18dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <!-- 가까운 리필스테이션 -->
+    <!--<RelativeLayout
+        android:id="@+id/relative_refill_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>-->
+
+</RelativeLayout>
