@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContentProviderCompat.requireContext
+import com.umc.reco_aos.LoginActivity
 import com.umc.reco_aos.MainActivity
 import com.umc.reco_aos.R
 import com.umc.reco_aos.databinding.ActivityOnBoardBinding
@@ -20,7 +21,7 @@ class OnBoardActivity : AppCompatActivity() {
         var count: Int = 1
         binding.btnOnboard.setOnClickListener {
             if(count == 4) {
-                val mainActivity = Intent(this, MainActivity::class.java)
+                val mainActivity = Intent(this, LoginActivity::class.java)
                 startActivity(mainActivity)
                 finish()
             }

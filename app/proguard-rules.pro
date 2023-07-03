@@ -19,3 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#디버그 과정에서는 아무런 차이가 없지만 난독화 빌드에서 이상한 버그가 발생할 수 있으니 그냥 추가하는 걸 추천
+# https://developers.kakao.com/docs/latest/en/getting-started/sdk-android#configure-for-shrinking-and-obfuscation-(optional)
+-keep class com.kakao.sdk.**.model.* { <fields>; }
+-keep class * extends com.google.gson.TypeAdapter

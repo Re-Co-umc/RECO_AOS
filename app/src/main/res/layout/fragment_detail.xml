@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,7 +20,6 @@
             android:id="@+id/storeImg"
             android:layout_width="match_parent"
             android:layout_height="320dp" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,7 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/noto_sans_bold"
-                        android:text="가게 이름"
+                        android:text="슈가버블 자양점"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -57,7 +55,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/noto_sans"
-                        android:text="서울 ㅇㅇ동"
+                        android:text="서울, 광진구"
                         android:textColor="#656565"
                         android:textSize="11sp" />
                 </LinearLayout>
@@ -132,12 +130,12 @@
         </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:background="@color/lineColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <View-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="63dp"-->
+<!--        android:background="@color/lineColor"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

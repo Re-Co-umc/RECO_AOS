@@ -27,7 +27,7 @@
             android:fontFamily="@font/noto_sans"
             android:textSize="12sp"
             android:textColor="@color/detailFontColor"
-            android:text="위치입니당" />
+            android:text="서울, 광진구" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:fontFamily="@font/noto_sans"
             android:textSize="12sp"
             android:textColor="@color/detailFontColor"
-            android:text="영업시간입니당" />
+            android:text="오전 9:00 - 오후 10:00" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,7 +67,7 @@
             android:fontFamily="@font/noto_sans"
             android:textSize="12sp"
             android:textColor="@color/detailFontColor"
-            android:text="사이트 링크에용" />
+            android:text="https://map.naver.com/v5/search/%EC%8A%88%EA%B0%80%EB%B2%84%EB%B8%94/place/1582064155?c=15,0,0,0,dh" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,7 +87,7 @@
             android:fontFamily="@font/noto_sans"
             android:textSize="12sp"
             android:textColor="@color/detailFontColor"
-            android:text="전화번호입니당" />
+            android:text="02-790-6681" />
     </LinearLayout>
 
 </LinearLayout>

@@ -81,4 +81,10 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.14.2'
     // coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+
+    //카카오 의존성 추가
+    implementation "com.kakao.sdk:v2-user:2.8.6" // 카카오 로그인
+
+    //coroutine을 활용해서 kakao login을 구현할 것이므로 다음 편의를 위해 의존성을 build.gradle (:app)에 추가
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
 }
